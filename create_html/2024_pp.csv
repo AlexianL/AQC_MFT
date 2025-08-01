@@ -1,0 +1,16 @@
+﻿2024 pp,control pass,,apass1,,skimmed apass1,,\
+period,JIRA,report,JIRA,report,JIRA,report,\
+LHC24aa,O2-4810,LHC24aa_cpass0,O2-5200,LHC24aa_apass1,,,\
+LHC24ab,O2-4810,LHC24ab_cpass0,O2-5200,LHC24ab_apass1,,,\
+LHC24ac,O2-4850,not for physics,,,,,\
+LHC24ad,-,not for physics,,,,,\
+LHC24ae,-,not for physics,,,,,\
+LHC24af,O2-4879,LHC24af_cpass0,O2-4983,LHC24af_apass1,O2-5144,LHC24af_apass1_skimmed,\
+LHC24ag,O2-4919,LHC24ag_cpass0,O2-4993,LHC24ag_apass1,O2-5165,LHC24ag_apass1_skimmed,\
+LHC24ah,-,VdM scans,,,,,\
+LHC24ai,-,VdM scans,,,,,\
+LHC24aj,O2-4969,LHC24aj_cpass0,O2-5047,LHC24aj_apass1,O2-5172,LHC24aj_apass1_skimmed,\
+LHC24ak,-,not for physics,,,,,\
+LHC24al,O2-5101,LHC24al_cpass0,O2-5153,LHC24al_apass1,O2-5236,LHC24al_apass1_skimmed,\
+LHC24am,O2-5233,LHC24am_cpass0,O2-5317,LHC24am_apass1,,,\
+LHC24an,O2-5279,LHC24an_cpass0,O2-5367,LHC24an_apass1,,,\

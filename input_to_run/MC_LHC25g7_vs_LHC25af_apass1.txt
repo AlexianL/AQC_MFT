@@ -1,0 +1,12 @@
+compare=passes
+group=MC_LHC25g7_vs_LHC25af_apass1
+periods_mc=LHC25g7
+jira=O2-6178
+passes=apass1,passMC
+ref_pass=apass1
+rewrite_input=false
+rewrite_latex=true
+rewrite_plots=true
+runs:
+564468
+564472

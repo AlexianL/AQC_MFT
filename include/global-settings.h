@@ -1,0 +1,68 @@
+// MFT Asynchronous Quality Control
+// David Grund
+// 2024
+
+string SET_QC_VERSION = "";
+char csv_delimiter = ',';
+string STR_TRUE = "y";
+string STR_SOR = "STF"; // SOR or STF or SOX when STF is not available
+string STR_GOOD = "good";
+string STR_LIMREP = "LA MC repro.";
+string STR_LIMNOTREP = "LA MC not repro.";
+string STR_BAD = "bad";
+string STR_TIMEDEP = "time-dep";
+string STR_NOT_PART = "not part";
+string ROOT_FILES_FOLDER = "root_files/";
+string PATH_TO_HISTO_LIST = "input/list-of-histograms.csv";
+string PATH_TO_GLOBAL_MAP = "input/run-table.csv";
+string PLOTS_FOLDER = "plots/";
+string STR_AUTHOR = "[A. Lejeune (and D. Grund) for the MFT team]{Alexian Lejeune (and David Grund) on behalf of the MFT team}";
+string STR_INSTITUTE = "[]{}";
+string STR_DATE = R"([\today]{\today})";
+string LATEX_FOLDER = "latex/";
+string LATEX_SUBFOLDER = "include/";
+// qc paths: new, old
+string PATH_AQC_TRKS[2] = {"qc_async/MFT/MO/Tracks/", "qc_async/MFT/MO/Tracks/tracks/"};
+string PATH_AQC_CLS[2] = {"qc_async/MFT/MO/Clusters/", "qc_async/MFT/MO/Tracks/clusters/"};
+string PATH_QC_TRKS[2] = {"qc/MFT/MO/MFTAsyncTask/", "qc/MFT/MO/MFTAsyncTask/tracks/"};
+string PATH_QC_CLS[2] = {"qc/MFT/MO/MFTClusterTask/", "qc/MFT/MO/MFTAsyncTask/clusters/"};
+string PATH_MC_TRKS[2] = {"qc_mc/MFT/MO/Tracks/", "qc_mc/MFT/MO/Tracks/tracks/"};
+string PATH_MC_CLS[2] = {"qc_mc/MFT/MO/Clusters/", "qc_mc/MFT/MO/Tracks/clusters/"};
+
+const int n_colors = 5; // base colors available
+const int n_styles = 3;
+
+/*
+Color_t color_table[n_colors] = { 
+  kBlue,
+  kOrange,
+  kCyan,
+  kRed,
+  kGreen,
+  kMagenta,
+  kYellow+1,
+  kViolet,
+  kGray,
+  43
+};
+*/
+
+Color_t color_table[n_colors] = { 
+  kBlue,
+  kCyan,
+  kViolet,
+  kRed,
+  kGreen,
+};
+
+const int n_runs_per_slide = 15;
+
+const int n_plots_per_slide = 6;
+string PLOTS_TO_PPT[6] = {
+  "mMFTTrackEta_5_MinClusters",
+  "mMFTTrackPhi_5_MinClusters",
+  "mMFTTrackInvQPt",
+  "mMFTTrackNumberOfClusters",
+  "mMFTTrackROFSize",
+  "mClustersROFSize"
+};
