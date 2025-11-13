@@ -1,7 +1,7 @@
 Instructions on how to run the **MFT A-QC tool**:
 - A local O2 or QualityControl build is needed.
 - If QC objects need to be downloaded, first open a separate terminal window and connect to lxtunnel using `sshuttle`: specify your CERN username in `tunnel.sh`, then run the script and provide your sudo password + a CERN password. Leave the terminal window running as long as you need, all your internet connection goes through it. When finished, you may disconnect using CTRL+C.
-- The tool can be run using `MFT-AQC_run.sh`. In the shell script, you need to specify a configuration file from the `input` folder - either create a new one or select one from the existing. The tool then uses the following macros:
+- The tool can be run using `run_mft_aqc.sh`. In the shell script, you need to specify a configuration file from the `input` folder - either create a new one or select one from the existing. The tool then uses the following macros:
     - `downloadQCObjects.cxx`: QC objects for selected runs are downloaded from ali-QCDB (data) or CCDB-test (MC). They will be stored inside .root files in `rootFiles/<period>/<run>_<pass>.root`.
     - `plotQCobjects.cxx`: plots of all requested QC objects are created and stored in `plots/<group-name>/...`. The list of histograms to be plotted is specified in `input/objectsToPlot.csv` (there must be 'y' in the next-to-last column of the .csv file).
     - `prepareSlides.cxx`: Latex presentation is created automatically for every input configuration. The .tex files are stored in the `latex/` folder.
