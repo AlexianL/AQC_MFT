@@ -1,13 +1,13 @@
 Instructions on how to run the **MFT A-QC tool**:
 - A local O2 or QualityControl build is needed.
 - If QC objects need to be downloaded, first open a separate terminal window and connect to lxtunnel using `sshuttle`: specify your CERN username in `tunnel.sh`, then run the script and provide your sudo password + a CERN password. Leave the terminal window running as long as you need, all your internet connection goes through it. When finished, you may disconnect using CTRL+C.
-- The tool can be run using `run_mft_aqc.sh`. In the shell script, you need to specify a configuration file from the `input` folder - either create a new one or select one from the existing. The tool then uses the following macros:
-    - `downloadQCObjects.cxx`: QC objects for selected runs are downloaded from ali-QCDB (data) or CCDB-test (MC). They will be stored inside .root files in `rootFiles/<period>/<run>_<pass>.root`.
-    - `plotQCobjects.cxx`: plots of all requested QC objects are created and stored in `plots/<group-name>/...`. The list of histograms to be plotted is specified in `input/objectsToPlot.csv` (there must be 'y' in the next-to-last column of the .csv file).
-    - `prepareSlides.cxx`: Latex presentation is created automatically for every input configuration. The .tex files are stored in the `latex/` folder.
+- The tool can be run using `run_mft_aqc.sh` while being in O2 environment (check if the permissions of the file can allow you to execute it, if not you can change the permissions of the file). The shell script will run all configuration files from the `input_to_run` folder - if you don't want to run a configuration file, you can move it into the "input_to_run/completed/" folder. The tool then uses the following macros:
+    - `download_qc_objects.cxx`: QC objects for selected runs are downloaded from ali-QCDB (data) or CCDB-test (MC). They will be stored inside .root files in `root_files/<period>/<run>_<pass>.root`.
+    - `plot_qc_objects.cxx`: plots of all requested QC objects are created and stored in `plots/<group-name>/...`. The list of histograms to be plotted is specified in `input/list-of-histograms.csv` (there must be 'y' in the next-to-last column of the .csv file).
+    - `prepare_slides.cxx`: Latex presentation is created automatically for every input configuration. The .tex files are stored in the `latex/` folder.
 
 How to **create an input configuration file**:
-- To see the list of all supported options that can be requested, see: `include/loadConfiguration`.
+- To see the list of all supported options that can be requested, see: `include/load-configuration`.
 - Parameters need to be provided as: `key=value` (no spaces)!
 - The keyword `runs:` needs to be followed by a run list (each run on a separate line).
 
